@@ -10,6 +10,7 @@ from mat.algorithms.utils.transformer_act import discrete_parallel_act
 from mat.algorithms.utils.transformer_act import continuous_autoregreesive_act
 from mat.algorithms.utils.transformer_act import continuous_parallel_act
 
+
 def init_(m, gain=0.01, activate=False):
     if activate:
         gain = nn.init.calculate_gain('relu')

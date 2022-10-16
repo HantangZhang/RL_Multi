@@ -6,43 +6,43 @@
 # license agreement from NVIDIA CORPORATION is strictly prohibited.
 
 from mat.envs.dexteroushandenvs.tasks.shadow_hand_over import ShadowHandOver
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_catch_overarm import ShadowHandCatchOverarm
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_catch_underarm import ShadowHandCatchUnderarm
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_two_catch_underarm import ShadowHandTwoCatchUnderarm
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_catch_abreast import ShadowHandCatchAbreast
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_re_orientation import ShadowHandReOrientation
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_over_overarm import ShadowHandOverOverarm
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_catch_overarm import ShadowHandCatchOverarm
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_catch_underarm import ShadowHandCatchUnderarm
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_two_catch_underarm import ShadowHandTwoCatchUnderarm
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_catch_abreast import ShadowHandCatchAbreast
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_re_orientation import ShadowHandReOrientation
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_over_overarm import ShadowHandOverOverarm
 # # from tasks.shadow_hand import ShadowHand
-# from mat.envs.dexteroushandenvs.tasks.franka_cabinet import OneFrankaCabinet
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_lift_overarm import ShadowHandLiftOverarm
+# from MAT.envs.dexteroushandenvs.tasks.franka_cabinet import OneFrankaCabinet
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_lift_overarm import ShadowHandLiftOverarm
 from mat.envs.dexteroushandenvs.tasks.shadow_hand_lift_underarm import ShadowHandLiftUnderarm
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_lift import ShadowHandLift
-# from mat.envs.dexteroushandenvs.tasks.humanoid import Humanoid
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_lift import ShadowHandLift
+# from MAT.envs.dexteroushandenvs.tasks.humanoid import Humanoid
 from mat.envs.dexteroushandenvs.tasks.shadow_hand_catch_over2underarm import ShadowHandCatchOver2Underarm
 # # from tasks.shadow_hand_test import ShadowHandTest
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_lift_underarm2 import ShadowHandLiftUnderarm2
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_bottle_cap import ShadowHandBottleCap
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_door_close_inward import ShadowHandDoorCloseInward
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_lift_underarm2 import ShadowHandLiftUnderarm2
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_bottle_cap import ShadowHandBottleCap
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_door_close_inward import ShadowHandDoorCloseInward
 from mat.envs.dexteroushandenvs.tasks.shadow_hand_door_close_outward import ShadowHandDoorCloseOutward
 from mat.envs.dexteroushandenvs.tasks.shadow_hand_door_open_inward import ShadowHandDoorOpenInward
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_door_open_outward import ShadowHandDoorOpenOutward
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_kettle import ShadowHandKettle
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_pen import ShadowHandPen
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_block_stack import ShadowHandBlockStack
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_switch import ShadowHandSwitch
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_meta.shadow_hand_meta import ShadowHandMeta
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_lift_cup import ShadowHandLiftCup
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_push_block import ShadowHandPushBlock
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_swing_cup import ShadowHandSwingCup
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_grasp_and_place import ShadowHandGraspAndPlace
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_scissors import ShadowHandScissors
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_door_open_outward import ShadowHandDoorOpenOutward
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_kettle import ShadowHandKettle
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_pen import ShadowHandPen
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_block_stack import ShadowHandBlockStack
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_switch import ShadowHandSwitch
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_meta.shadow_hand_meta import ShadowHandMeta
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_lift_cup import ShadowHandLiftCup
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_push_block import ShadowHandPushBlock
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_swing_cup import ShadowHandSwingCup
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_grasp_and_place import ShadowHandGraspAndPlace
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_scissors import ShadowHandScissors
 #
 # # Meta
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_meta.shadow_hand_meta_mt1 import ShadowHandMetaMT1
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_meta.shadow_hand_meta_ml1 import ShadowHandMetaML1
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_meta.shadow_hand_meta_mt5 import ShadowHandMetaMT5
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_meta.shadow_hand_meta_mt5_door import ShadowHandMetaMT5Door
-# from mat.envs.dexteroushandenvs.tasks.shadow_hand_meta.shadow_hand_meta_mt20 import ShadowHandMetaMT20
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_meta.shadow_hand_meta_mt1 import ShadowHandMetaMT1
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_meta.shadow_hand_meta_ml1 import ShadowHandMetaML1
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_meta.shadow_hand_meta_mt5 import ShadowHandMetaMT5
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_meta.shadow_hand_meta_mt5_door import ShadowHandMetaMT5Door
+# from MAT.envs.dexteroushandenvs.tasks.shadow_hand_meta.shadow_hand_meta_mt20 import ShadowHandMetaMT20
 
 from mat.envs.dexteroushandenvs.tasks.hand_base.vec_task import VecTaskCPU, VecTaskGPU, VecTaskPython, VecTaskPythonArm
 from mat.envs.dexteroushandenvs.tasks.hand_base.multi_vec_task import MultiVecTaskPython, SingleVecTaskPythonArm
