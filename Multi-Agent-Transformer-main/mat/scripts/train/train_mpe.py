@@ -56,7 +56,7 @@ def parse_args(args, parser):
                         default='simple_spread', help="Which scenario to run on")
     parser.add_argument("--num_landmarks", type=int, default=3)
     parser.add_argument('--num_agents', type=int,
-                        default=2, help="number of players")
+                        default=5, help="number of players")
 
     all_args = parser.parse_known_args(args)[0]
 

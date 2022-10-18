@@ -5,20 +5,47 @@ import numpy as np
 import torch
 
 '''
+每次运行用runner，runner对于特点的环境需要写一个特定的runner，同时它继承一个base_runner
+在base_runner中：
+    1）它的策略来自于transformer_policy，这个策略是以ma_transformer的神经网络为主体写的，里面是一些调用
+        神经网络的逻辑。
+    2）同时里面还有mat的trainer，它是mat如何计算损失，梯度等训练的逻辑，用到的是mat_trainner
+
+
+'''
+
+'''
 问题记录：
 1. env的东西都没有研究，感觉目前没有必要研究
 2. self.use_centralized_V
 3. episode
 4. self.recurrent_N = self.all_args.recurrent_N 为什么用到recurrent network
-5. share_observation_space在5v5中是否有用
+5. share_observation_space在5v5中是否有用：在mat中应该没用，它为每一个智能体单评估value，并不是共享value
 6. cen_obs_space 明确这个的含义
 7. TransformerPolicy 中self.act_num的作用
 8. SelfAttention中n_embd的具体含义和embed方法, L这一维的含义
-
+9. encoder当中输出的v_loc作用
+10. decoder中dec_actor的含义: 推测是decentrailized actor
+11. 搞清楚什么时候forward，什么时候get_action，什么时候get_value
+12. discrete_parallel_act里面shiftaction可能有错，它那么转换会丢失掉最后一个智能体执行的动作
+    inference用的自回归和它一样，先加了一行0，意味着第一个智能体是基于都是0的向量来选择动作，这是否合理
+13. 暂时所有关于rnn的都无视掉，rnn_states_actor和rnn_states_critic
+14. Number of parallel envs for training rollouts搞清楚这个参数的作用，它好像就是batch_size：并不是batch_size，
+    它就是起了几个env一起推进
+15. warmup()做了一件什么事情：就是重置env，我觉得这里面还可以做很多事情
 
 
 '''
 
+'''
+mpe环境
+每个智能体有5个离散的动作
+每个智能体obs有21维，一个列表，共三个
+share_obs_dim有63维，一个列表，3个agent有3个63维
+
+
+
+'''
 
 def make_train_env(all_args):
     train_maps = all_args.train_maps
