@@ -33,6 +33,17 @@ import torch
 14. Number of parallel envs for training rollouts搞清楚这个参数的作用，它好像就是batch_size：并不是batch_size，
     它就是起了几个env一起推进
 15. warmup()做了一件什么事情：就是重置env，我觉得这里面还可以做很多事情
+16. 一个trajectory就是一个rollout，那么每次存buffer的时候是怎么寸的，每个batch是里面的数据和trajectory的关系
+17. insert当中maks的作用masks[dones == True] = np.zeros(((dones == True).sum(), 1), dtype=np.float32)
+18. bad_masks的含义和作用
+19. active_masks是如何起作用的，起作用后的效果
+20. available_actions起作用的方式
+21. mat默认使用gae计算advantage，其中可选的可以用到popart来计算或者valuenorm来计算，或者都不用，advantage计算在buffer里
+22. 在compute_returns中计算advantage的时候，delta里面`self.masks的作用
+23. 明确return，value_pred和gae的计算
+24. value_normalizer实现的方法
+25 _shuffle_agent_grid 并没有带乱agent的顺序
+
 
 
 '''
