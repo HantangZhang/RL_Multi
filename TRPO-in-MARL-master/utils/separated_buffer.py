@@ -75,10 +75,10 @@ class SeparatedReplayBuffer(object):
         self.value_preds[self.step] = value_preds.copy()
         self.rewards[self.step] = rewards.copy()
         self.masks[self.step + 1] = masks.copy()
-        if bad_masks is not None:
-            self.bad_masks[self.step + 1] = bad_masks.copy()
-        if active_masks is not None:
-            self.active_masks[self.step + 1] = active_masks.copy()
+        # if bad_masks is not None:
+        #     self.bad_masks[self.step + 1] = bad_masks.copy()
+        # if active_masks is not None:
+        #     self.active_masks[self.step + 1] = active_masks.copy()
         if available_actions is not None:
             self.available_actions[self.step + 1] = available_actions.copy()
 

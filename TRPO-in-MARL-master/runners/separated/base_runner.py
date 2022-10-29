@@ -4,7 +4,7 @@ import os
 import numpy as np
 from itertools import chain
 import torch
-from tensorboardX import SummaryWriter
+# from tensorboardX import SummaryWriter
 from utils.separated_buffer import SeparatedReplayBuffer
 from utils.util import update_linear_schedule
 
@@ -34,7 +34,7 @@ class Runner(object):
         self.hidden_size = self.all_args.hidden_size
         self.use_render = self.all_args.use_render
         self.recurrent_N = self.all_args.recurrent_N
-        self.use_single_network = self.all_args.use_single_network
+        # self.use_single_network = self.all_args.use_single_network
         # interval
         self.save_interval = self.all_args.save_interval
         self.use_eval = self.all_args.use_eval
@@ -44,21 +44,21 @@ class Runner(object):
         # dir
         self.model_dir = self.all_args.model_dir
 
-        if self.use_render:
-            import imageio
-            self.run_dir = config["run_dir"]
-            self.gif_dir = str(self.run_dir / 'gifs')
-            if not os.path.exists(self.gif_dir):
-                os.makedirs(self.gif_dir)
-        else:
-            self.run_dir = config["run_dir"]
-            self.log_dir = str(self.run_dir / 'logs')
-            if not os.path.exists(self.log_dir):
-                os.makedirs(self.log_dir)
-            self.writter = SummaryWriter(self.log_dir)
-            self.save_dir = str(self.run_dir / 'models')
-            if not os.path.exists(self.save_dir):
-                os.makedirs(self.save_dir)
+        # if self.use_render:
+        #     import imageio
+        #     self.run_dir = config["run_dir"]
+        #     self.gif_dir = str(self.run_dir / 'gifs')
+        #     if not os.path.exists(self.gif_dir):
+        #         os.makedirs(self.gif_dir)
+        # else:
+        #     self.run_dir = config["run_dir"]
+        #     self.log_dir = str(self.run_dir / 'logs')
+        #     if not os.path.exists(self.log_dir):
+        #         os.makedirs(self.log_dir)
+        #     # self.writter = SummaryWriter(self.log_dir)
+        #     self.save_dir = str(self.run_dir / 'models')
+        #     if not os.path.exists(self.save_dir):
+        #         os.makedirs(self.save_dir)
 
 
         if self.all_args.algorithm_name == "happo":
@@ -118,6 +118,7 @@ class Runner(object):
     def compute(self):
         for agent_id in range(self.num_agents):
             self.trainer[agent_id].prep_rollout()
+            x = self.buffer[agent_id].share_obs
             next_value = self.trainer[agent_id].policy.get_values(self.buffer[agent_id].share_obs[-1], 
                                                                 self.buffer[agent_id].rnn_states_critic[-1],
                                                                 self.buffer[agent_id].masks[-1])
